@@ -31,11 +31,9 @@ cacheSolve <- function(x, ...) { #the argument x is a special matrix that can st
   i <- x$getinverse()
   if(!anyNA(i)) { #if the inverse has been calculated already then notify the user and return the inverse
     message("getting cached data")
-    i
+    return(i)
   }
-  else  {    #calculate the inverse and store it in x
   i <- solve(x$get()) #i gets the inverse of X
   x$setinverse(i) #stores the inverse in cache
   i
-  }
 }
