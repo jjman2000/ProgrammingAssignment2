@@ -34,6 +34,6 @@ cacheSolve <- function(x, ...) { #the argument x is a special matrix that can st
     return(i)
   }
   i <- solve(x$get()) #i gets the inverse of X
-  x$setinverse(i) #stores the inverse in cache
+  x$setinverse(i) #stores the inverse in cache 
   i
 }
